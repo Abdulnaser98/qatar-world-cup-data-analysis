@@ -2,8 +2,6 @@
 
 ## Using Natural Language Processing Approaches to compare different media outlets on covering the world cup 2022
 
-This git repository documents the code base used in a custom argument retrieval system. The whole documentation can be found in the paper as quoted underneath.
-
 
 ___
 #### Abstract
