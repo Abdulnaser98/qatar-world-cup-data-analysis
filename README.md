@@ -4,5 +4,5 @@
 
 
 ___
-#### Abstract
->Relying on the background of document retrieval systems, this paper presents an argument retrieval system. It uses state of the art python libraries to automatically process a data set of arguments from the args.me corpus and store them in a custom index. The system can perform the process of ranking and ordering a list of relevant documents in response to a user's query by comparing the request to the produced index of documents. The special focus is on the use of several NLP-based analyses, including topic signal modeling, stylometric analysis, and primarily bias detection. These methods will be used to influence the ranking of the search engine.
+#### research question:
+> The FIFA football world cup 2022 was unlike other world cups before. Starting with corruption scandals surrounding the awarding, to the high death toll of construction workers and ongoing human rights abuses, the focus of the media did not seem to be purely on the beautiful game, at least in western countries. But how was the first world cup hosted by an arab/african nation perceived around the world? How did different media outlets report on it? What topics were discussed and what was the sentiment and did the different media outlets discuss different topics or did they discuss similar topics? To answer these questions, we must collect news reports from all over the world, dating way before the first whistle blew in November 2022. 
