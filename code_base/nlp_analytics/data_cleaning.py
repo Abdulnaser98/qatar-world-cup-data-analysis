@@ -31,18 +31,44 @@ def clean_text(text):
 
 
 # stop words are the words that convery little to no information about the actual content like the words:the, of, for etc
-def remove_stopwords(word_tokens):
+def remove_stopwords(text):
     filtered_sentence = []
     stop_words = stopwords.words('english')
-    specific_words_list = ['char', 'u', 'hindustan', 'doj', 'washington']
-    stop_words.extend(specific_words_list )
-    for w in word_tokens:
-        if w not in stop_words:
-            filtered_sentence.append(w)
-    return filtered_sentence
+    specific_words_list = ['char', 'u', 'hindustan', 'doj', 'washington','World','Cup','world','cup',
+                           'qatar','Qatar','world','World','cup','Cup','wales','fans','said','fifa','football','it','team']
+    stop_words.extend(specific_words_list)
+    words = text.split()
+    filtered_words = [word for word in words if word.lower() not in stop_words]
+    return ' '.join(filtered_words)
 
 
 # function for lemmatization
 def lemmatize(x):
     lemmatizer = WordNetLemmatizer()
     return' '.join([lemmatizer.lemmatize(word) for word in x])
+
+
+def extract_relevant_articles_bbc(data):
+    data = data.dropna(subset=['main_content'])
+    data.reset_index(drop=True, inplace=True)
+
+    # Define the words that you want to keep
+    words_together = 'World Cup 2022'
+    word1 = 'World Cup'
+    word2 = 'World cup'
+    word3 = 'world Cup'
+    word4 = 'world cup'
+    word5 = 'world cup 2022'
+
+    # Filter the DataFrame to keep only the rows where the specified column contains any of the words
+    data = data[data['main_content'].str.contains(words_together) | data['main_content'].str.contains(word1) | data['main_content'].str.contains(word2) | data['main_content'].str.contains(word3) | data['main_content'].str.contains(word4) | data['main_content'].str.contains(word5)]
+
+    data.reset_index(drop=True, inplace=True)
+
+    return data
+
+
+def remove_empty_rows(data):
+    data = data.dropna(subset=['main_content'])
+    data.reset_index(drop=True, inplace=True)
+    return data
