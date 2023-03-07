@@ -2,6 +2,7 @@ import re
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 
+
 def _removeNonAscii(s):
     return "".join(i for i in s if ord(i)<128)
 
@@ -29,9 +30,11 @@ def clean_text(text):
     text = text.strip()
     return text
 
-
-# stop words are the words that convery little to no information about the actual content like the words:the, of, for etc
 def remove_stopwords(text):
+    """
+    remove stop words that convery little to no information about the actual content like the words: the, of, for etc
+    Additionally , other domain-specifc words like world , cup , football , team should be also removed
+    """
     filtered_sentence = []
     stop_words = stopwords.words('english')
     specific_words_list = ['char', 'u', 'hindustan', 'doj', 'washington','World','Cup','world','cup',
@@ -47,28 +50,27 @@ def lemmatize(x):
     lemmatizer = WordNetLemmatizer()
     return' '.join([lemmatizer.lemmatize(word) for word in x])
 
-
 def extract_relevant_articles_bbc(data):
+    """
+    Extract only relevant articles from bbc , as we first searched after articles that
+    contain the word "qatar" and then filtered out articles about the word cup 2022
+    """
     data = data.dropna(subset=['main_content'])
     data.reset_index(drop=True, inplace=True)
 
-    # Define the words that you want to keep
-    words_together = 'World Cup 2022'
+    # Define the words that should be kept'
     word1 = 'World Cup'
-    word2 = 'World cup'
-    word3 = 'world Cup'
-    word4 = 'world cup'
-    word5 = 'world cup 2022'
+    word2 = 'World Cup 2022'
 
     # Filter the DataFrame to keep only the rows where the specified column contains any of the words
-    data = data[data['main_content'].str.contains(words_together) | data['main_content'].str.contains(word1) | data['main_content'].str.contains(word2) | data['main_content'].str.contains(word3) | data['main_content'].str.contains(word4) | data['main_content'].str.contains(word5)]
+    data = data[data['main_content'].str.contains(word1, case=False) | data['main_content'].str.contains(word2, case=False)]
 
     data.reset_index(drop=True, inplace=True)
 
     return data
 
-
+# remove the rows , where the "main_content" column is empty
 def remove_empty_rows(data):
-    data = data.dropna(subset=['main_content'])
-    data.reset_index(drop=True, inplace=True)
-    return data
+    data_after_removing_NAN = data.dropna(subset=['main_content'])
+    data_after_removing_NAN.reset_index(drop=True, inplace=True)
+    return data_after_removing_NAN
