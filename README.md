@@ -19,4 +19,4 @@ ___
 When the "main.py" file is run , the data are extracted from the three observed media outlets "Al Jazeera", "BBC" and "the guardian" and then the data will be cleaned. Additionally , sentiment scores and named entities will be generated and saved in the Evulationsfolder
 
  
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/Abdulnaser98/qatar-world-cup-data-analysis/main/figure/6D446898-ACF3-44B6-8F86-70B294262E73.jpeg?raw=true)
