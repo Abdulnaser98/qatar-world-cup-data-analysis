@@ -16,7 +16,14 @@ ___
 #### Use:
 
                                                
-When the "main.py" file is run , the data are extracted from the three observed media outlets "Al Jazeera", "BBC" and "the guardian" and then the data will be cleaned. Additionally , sentiment scores and named entities will be generated and saved in the Evulationsfolder
-
- 
 ![alt text](https://github.com/Abdulnaser98/qatar-world-cup-data-analysis/blob/main/figure/6D446898-ACF3-44B6-8F86-70B294262E73.jpeg?raw=true)
+
+When the "main.py" file is run , three python files will be called: scraper.py ,data_cleanning.py,sentiment_analysis.py and Named_entity_recognition.py 
+scraper.py is stored in the follwoing folder: ./code_base/data_extraction/scrapers and there is one scrpaer pytzhon file for each media outlet that can be used to extract the data from the three media outlets "The guardain", "BBC" and "Al jazeera" and when the data are extracted , they will be stored in the follwing folder: ./code_base/data_extraction/raw_data
+The second python file that is called by the main.py is the data_cleaning.py that is used to clean the extraced raw data and then the cleaned data will be 
+stored in the follwing folder: ./code_base/data_extraction/data_cleaned 
+The third python file that is called by the main.py is the sentimetn_analysis.py that is used to conduct sentimet analysis on the cleadned data and the gebnerated sentimetn scores statistcs will be stored in the follwoing folder: ./code_base/evaluation
+The fourth python file that is called by the main.py is the Named_Entitiy_recognition.py that is used to extract named entitties from the cleaned data for each media outlet and the resulted named entities will be stored in the folllwoing folder: ./code_base/evaluation/{medua_outlet}/NER 
+ 
+
+
