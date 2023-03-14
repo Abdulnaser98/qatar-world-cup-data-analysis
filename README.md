@@ -18,10 +18,10 @@ ___
 ![alt text](https://github.com/Abdulnaser98/qatar-world-cup-data-analysis/blob/main/figure/6D446898-ACF3-44B6-8F86-70B294262E73.jpeg?raw=true)
 
 When the **"main.py"** file is run , 4 python files will be called: 
-**1. scraper.py**
-**2. data_cleaning.py**
-**3. sentiment_analysis.py**
-**4. Named_entity_recognition.py**
+1. **scraper.py**
+2. **data_cleaning.py**
+3. **sentiment_analysis.py**
+4. **Named_entity_recognition.py**
 
 **scraper.py** is stored in the follwoing folder: ./code_base/data_extraction/scrapers and there is one scraper python file for each media outlet that can be used to extract the data from the three media outlets "The guardain", "BBC" and "Al jazeera" and when the data are extracted , they will be stored in the follwing folder: ./code_base/data_extraction/raw_data
 
