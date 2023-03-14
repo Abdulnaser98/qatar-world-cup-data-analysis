@@ -30,7 +30,15 @@ stored in the follwing folder: ./code_base/data_extraction/data_cleaned
 
 **sentiment_analysis.py** is used to conduct sentimet analysis on the cleaned data and the generated sentiment scores statistics will be stored in the follwoing folder: ./code_base/evaluation
 
-**Named_Entitiy_recognition.py** is used to extract named entitties from the cleaned data for each media outlet and the resulted named entities will be stored in the folllwoing folder: ./code_base/evaluation/{medua_outlet}/NER
+**Named_Entitiy_recognition.py** is used to extract named entitties from the cleaned data for each media outlet and the resulted named entities will be stored in the folllwoing folder: ./code_base/evaluation/{medua_outlet}/NER and there is Named_Entity_Recognition_Exploratory_data_analysis.ipynb in the same folder and this notebook is used to conduct exploratory data analysis on the named entities data that were generated using the Named_Entitiy_recognition.py
+
+
+Regarding **Topic modelling** , the task cannot be automated entirley , because the topics should be slelected manually due to the nature of Bertopic , therefore we conducted the task of topic modelling in a notebook that is stored in the follwoing path: ./code_base/nlp_analytics/Topic_modeling.ipynb
+For each subtopic from each media outlet the data regarding the subtopic will be stored in the following folder for further analysis: ./code_base/evaluation/{medua_outlet}/subtopics_data 
+
+
+**cooccurrence analysis** will be conducted then on the subtopics data stored in the folder: ./code_base/evaluation/{medua_outlet}/subtopics_data and the generated results will be stored in the folder:  ./code_base/evaluation/{medua_outlet}/cooccurance Analysis
+
  
 
 
