@@ -37,9 +37,9 @@ Regarding **Topic modelling** , the task cannot be automated entirley , because 
 For each subtopic from each media outlet the data regarding the subtopic will be stored in the following folder for further analysis: ./code_base/evaluation/{medua_outlet}/subtopics_data 
 
 
-**cooccurrence analysis** will be conducted on the subtopics data using the R file in the folder: ./code_base/nlp_analytics/cooccurrence analysis/co_occurrence_analysis.R on the subtopics data stored in the folder: ./code_base/evaluation/{medua_outlet}/subtopics_data and the generated results will be stored in the folder:  ./code_base/evaluation/{medua_outlet}/cooccurance Analysis 
+**cooccurrence analysis** will be conducted on the subtopics data in the folder: ./code_base/evaluation/{medua_outlet}/subtopics_data using the R file in the folder: ./code_base/nlp_analytics/cooccurrence analysis/co_occurrence_analysis.R and the generated results will be stored in the folder: ./code_base/evaluation/{medua_outlet}/cooccurance Analysis 
 
-Additionally there Exploratory data analysis was conducted on the coocuurrence analysis results using the follwoing file: ./code_base/nlp_analytics/cooccurrence analysis/co-occurrence_analysis.ipynb and the results are stored in the folder: ./code_base/evaluation/{medua_outlet}/cooccurance Analysis
+**Additionally**,  Exploratory data analysis was conducted on the coocuurrence analysis results using the follwoing file: ./code_base/nlp_analytics/cooccurrence analysis/co-occurrence_analysis.ipynb and the results are stored in the folder: ./code_base/evaluation/{medua_outlet}/cooccurance Analysis
 
  
 
