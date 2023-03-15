@@ -17,17 +17,17 @@ nltk.download('wordnet')
 
 # ============================================ News artilces of "Aljazerra, BBC and the gaurdian" ========================================================
 # Extract the articles data from Al jazerra
-aljazerra_web_scraping_main()
+#aljazerra_web_scraping_main()
 #bbc_web_scraping_main()
 # ============================================================= Set file Pathes ========================================================
-#path_to_raw_data_folder = "./code_base/data_extraction/raw_data/"
-#path_to_cleaned_data_folder = "./code_base/data_extraction/cleaned_data/"
-#path_to_evaluation_folder = "./code_base/evaluation/"
-#media_outlets = ["aljazerra_data","bbc_data","guardian"]
-#cleaned_data_files_extensions = ["aljazerra_cleaned_data.csv","bbc_cleaned_data.csv","guardian_cleaned_data.csv"]
+path_to_raw_data_folder = "./code_base/data_extraction/raw_data/"
+path_to_cleaned_data_folder = "./code_base/data_extraction/cleaned_data/"
+path_to_evaluation_folder = "./code_base/evaluation/"
+media_outlets = ["aljazerra_data","bbc_data","guardian"]
+cleaned_data_files_extensions = ["aljazerra_cleaned_data.csv","bbc_cleaned_data.csv","guardian_cleaned_data.csv"]
 # =========================================================== Data cleaning ======================================================
-#main_clean_data(path_to_raw_data_folder,media_outlets,cleaned_data_files_extensions,path_to_cleaned_data_folder)
+main_clean_data(path_to_raw_data_folder,media_outlets,cleaned_data_files_extensions,path_to_cleaned_data_folder)
 # ========================================================== Sentiment analysis =========================================================
-#main_sentiment_analysis(media_outlets,cleaned_data_files_extensions,path_to_cleaned_data_folder,path_to_evaluation_folder)
+main_sentiment_analysis(media_outlets,cleaned_data_files_extensions,path_to_cleaned_data_folder,path_to_evaluation_folder)
 # ========================================================== Named entity recognition =========================================================
-#main_NER(path_to_cleaned_data_folder,path_to_evaluation_folder)
+main_NER(path_to_cleaned_data_folder,path_to_evaluation_folder)
