@@ -30,16 +30,16 @@ stored in the follwing folder: ./code_base/data_extraction/data_cleaned
 
 **sentiment_analysis.py** is used to conduct sentimet analysis on the cleaned data and the generated sentiment scores statistics will be stored in the follwoing folder: ./code_base/evaluation
 
-**Named_Entitiy_recognition.py** is used to extract named entitties from the cleaned data for each media outlet and the resulted named entities will be stored in the folllwoing folder: ./code_base/evaluation/{medua_outlet}/NER and there is Named_Entity_Recognition_Exploratory_data_analysis.ipynb in the same folder and this notebook is used to conduct exploratory data analysis on the named entities data that were generated using the Named_Entitiy_recognition.py
+**Named_Entitiy_recognition.py** is used to extract named entities from the cleaned data for each media outlet and the resulted named entities will be stored in the folllwoing folder: ./code_base/evaluation/{media_outlet}/NER and there is Named_Entity_Recognition_Exploratory_data_analysis.ipynb in the same folder and this notebook is used to conduct exploratory data analysis on the named entities data that were generated using the Named_Entitiy_recognition.py
 
 
-Regarding **Topic modelling** , the task cannot be automated entirley , because the topics should be slelected manually due to the nature of Bertopic , therefore we conducted the task of topic modelling in a notebook that is stored in the follwoing path: ./code_base/nlp_analytics/Topic_modeling.ipynb
-For each subtopic from each media outlet the data regarding the subtopic will be stored in the following folder for further analysis: ./code_base/evaluation/{medua_outlet}/subtopics_data 
+Regarding **Topic modelling** , the task could not be automated entirly , because the topics should be selected manually due to the nature of Bertopic , therefore we conducted the task of topic modelling in a notebook that is stored in the follwoing path: ./code_base/nlp_analytics/Topic_modeling.ipynb
+For each subtopic from each media outlet the data regarding the subtopic will be stored in the following folder for further analysis: ./code_base/evaluation/{media_outlet}/subtopics_data 
 
 
-**cooccurrence analysis** will be conducted on the subtopics data in the folder: ./code_base/evaluation/{medua_outlet}/subtopics_data using the R file in the folder: ./code_base/nlp_analytics/cooccurrence analysis/co_occurrence_analysis.R and the generated results will be stored in the folder: ./code_base/evaluation/{medua_outlet}/cooccurance Analysis 
+**cooccurrence analysis** will be conducted on the subtopics data in the folder: ./code_base/evaluation/{media_outlet}/subtopics_data using the R file in the folder: ./code_base/nlp_analytics/cooccurrence analysis/co_occurrence_analysis.R and the generated results will be stored in the folder: ./code_base/evaluation/{media_outlet}/cooccurance Analysis 
 
-**Additionally**,  Exploratory data analysis was conducted on the coocuurrence analysis results using the follwoing file: ./code_base/nlp_analytics/cooccurrence analysis/co-occurrence_analysis.ipynb and the results are stored in the folder: ./code_base/evaluation/{medua_outlet}/cooccurance Analysis
+**Additionally**,  Exploratory data analysis was conducted on the cooccurrence analysis results using the following file: ./code_base/nlp_analytics/cooccurrence analysis/co-occurrence_analysis.ipynb and the results are stored in the folder: ./code_base/evaluation/{media_outlet}/cooccurance Analysis
 
  
 
