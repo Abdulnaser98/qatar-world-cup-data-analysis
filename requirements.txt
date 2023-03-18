@@ -1,4 +1,11 @@
 selenium
 webdriver_manager
-nltk
-empath
+pandas 
+tqdm 
+matplotlib 
+nltk 
+re 
+bertopic 
+sklearn 
+spacy 
+nlp 
